@@ -68,14 +68,3 @@ mouuseScale(".textConLP");
 mouuseScale(".sub-con-1");
 mouuseScale(".contact-navi");
 mouuseScale(".big");
-
-
-let InitialPath = 'M 0 30 Q 30 30 700 30'
-document.querySelector(".svg").addEventListener("mousemove",function(e){
-    console.log('sfglou');
-    let AbsPath = `M 0 30 Q ${e.clientX} ${e.clientY} 700 30`
-    gsap.to(".svg path",{
-        attr:{d:AbsPath},
-        duration:0.1,
-    })
-})
