@@ -1,32 +1,11 @@
-// let text = ["Hello", "હેલો", "Bonjour", "Ciao", ""];
-// let pre_con = document.querySelector(".pre-loader");
-// let $textLoader = document.querySelector(".loader-text h2");
-// setTimeout(() => {
-//   let i = 0;
-//   setInterval(() => {
-//     $textLoader.innerText = text[i];
-//     i++;
-//   }, 1000);
-//   setTimeout(() => {
-//     pre_con.animate(
-//       {
-//         height: 0,
-//       },
-//       { duration: 1500, fill: "forwards" }
-//     );
-//     setTimeout(() => {
-//       pre_con.remove("visiblity");
-//     }, 1500);
-//   }, 4500);
-// }, 0);
-
+let text = ["Hello", "હેલો", "Bonjour", "Ciao", ""];
 let pre_con = document.querySelector(".pre-loader");
-let $text = document.querySelector(".loader-text h2");
+let $textLoader = document.querySelector(".loader-text h2");
 setTimeout(() => {
-  setTimeout(() => {
-    $text.animate({
-      fontSize: "250px",
-    },{duration: 1000, fill: "forwards"})
+  let i = 0;
+  setInterval(() => {
+    $textLoader.innerText = text[i];
+    i++;
   }, 1000);
   setTimeout(() => {
     pre_con.animate(
@@ -40,6 +19,27 @@ setTimeout(() => {
     }, 1500);
   }, 4500);
 }, 0);
+
+// let pre_con = document.querySelector(".pre-loader");
+// let $text = document.querySelector(".loader-text h2");
+// setTimeout(() => {
+//   setTimeout(() => {
+//     $text.animate({
+//       fontSize: "250px",
+//     },{duration: 1000, fill: "forwards"})
+//   }, 1000);
+//   setTimeout(() => {
+//     pre_con.animate(
+//       {
+//         height: 0,
+//       },
+//       { duration: 1500, fill: "forwards" }
+//     );
+//     setTimeout(() => {
+//       pre_con.remove("visiblity");
+//     }, 1500);
+//   }, 4500);
+// }, 0);
 
 
 
@@ -143,3 +143,9 @@ close_mob_nav.addEventListener("click",()=>{
 //       duration:1
 //     })
 // });
+var typed = new Typed('.typer', {
+  strings: ['Web Developer',' Frontend Developer.'],
+  typeSpeed: 100,
+  loop: true,
+  loopCount: Infinity,
+});

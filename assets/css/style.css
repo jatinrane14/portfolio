@@ -13,7 +13,7 @@
 }
 
 .bdr{
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 * {
   padding: 0;
@@ -172,7 +172,7 @@ p {
 .so-lks {
   display: none;
   background-color: white;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 .dark-lite-mode{
   position: absolute;
@@ -336,18 +336,31 @@ p {
   margin-bottom: 30px;
   letter-spacing: 2px;
 }
-.scroll-txt{
+.scroll-txt{ 
   position:absolute;
   bottom:25px;
   right: 20px;
-  /* border-radius: 50%; */
-  background-color: rgba(255, 255, 255, 0.199);
-  display: flex;
-  flex-direction: column;
-  padding: 0 12px;
-  border-radius: 50%;
 }
-
+.scroll-txt .text-rotateSvg {
+  background-color: transparent;
+  color: white;
+  width: 80px;
+  animation: rotate 6s linear infinite;
+}
+@keyframes rotate {
+  0%{
+    transform: rotate(270deg);
+  }
+  50%{
+    transform: translate(630deg);
+  }
+}
+.chevron-down-svg{
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  background-color: transparent ;
+}
 @media screen and (max-height:550px) {
   .scroll-txt{
     display: none;
@@ -369,38 +382,23 @@ p {
   width: 100%;
   height: 100%;
   padding: 50px 0 0 0 ;
+  /* border: 2px solid red; */
+  justify-content: center;
+  display: flex;
+
 }
 .intro-sub-con{
   max-width: 1000px;
   margin: auto;
-}
-.textslider{
-  position: relative;
+  /* border: 2px solid red; */
 }
 .intro-sub-con h2{
-  font-size: 30px;
+  font-size: 50px;
   /* border: 2px solid red; */
   display: inline-block;
   position: relative;
 }
-.intro-sub-con h2 span::after{
-  content: "";
-  position: absolute;
-  /* display: inline-block; */
-  background-color:#11071f ;
-  width: 200px;
-  height: 30px;
-  border-left: 2px solid red;
-  animation: textTyping  ease-in-out 3s infinite;
-}
-@keyframes textTyping {
-  40%,60%{
-    left: 100%;
-  }
-  100%{
-    left: 0%;
-  }
-}
+
 .intro-sub-con p {
   text-align: left;
   font-size: 25px;
@@ -410,25 +408,13 @@ p {
   background-color: transparent;
   border: none;
   border-radius: 20px;
-  padding: 5px 10px;
+  padding: 10px 10px;
   border: 1px solid white;
   position: relative;
 }
-.info-btn button::after{
-  content: "";
-  position: absolute;
+.info-btn button:hover{
   background-color: #542983;
-  border-radius: 20px;
-  top: 0;
-  left: 0;
-  width: 10%;
-  z-index: 1;
-  height: 100%;
-}
-@keyframes btn_slide {
-  100%{
-    width: 50%;
-  }
+  cursor: pointer;
 }
 /*Another SEction*/
 #section {
@@ -501,6 +487,10 @@ marquee{
 .lap-con img{
   width: 150px;
 }
+.skills-arrow{
+  background-color: #f1f1f1;
+}
+
 /* Project sec*/
 #project-sec{
   width: 100%;
