@@ -41,8 +41,6 @@ setTimeout(() => {
 //   }, 4500);
 // }, 0);
 
-
-
 let outline = document.querySelector(".mouse-outline");
 let un_out = document.querySelector(".mouse-un-out");
 window.addEventListener("mousemove", function (e) {
@@ -80,10 +78,6 @@ let navLinkCTgl = document.getElementsByClassName("nav-links")[0];
 // Toggle social links
 let so_lks = document.getElementsByClassName("so-lks");
 
-
-
-
-
 function sideNavWidth(w) {
   nav.style.width = w + "px";
 }
@@ -116,21 +110,20 @@ closeBtn.addEventListener("click", () => {
   sideNavTglClse();
 });
 
-
 let mobileNavToggle = document.querySelector(".toggle-mob-nav");
 let mob_navi = document.getElementsByClassName("tab-mob-view")[0];
 let close_mob_nav = document.getElementsByClassName("nav-close-btn")[0];
 mobileNavToggle.addEventListener("click", () => {
-    console.log('sdbg');
-    gsap.to(".tab-mob-view",{
-      transform:"translateY(0)",
-    })
+  console.log("sdbg");
+  gsap.to(".tab-mob-view", {
+    transform: "translateY(0)",
   });
-close_mob_nav.addEventListener("click",()=>{
-  gsap.to(".tab-mob-view",{
-    transform:"translateY(-100%)",
-  })
-})
+});
+close_mob_nav.addEventListener("click", () => {
+  gsap.to(".tab-mob-view", {
+    transform: "translateY(-100%)",
+  });
+});
 
 // let rightConH = document.querySelector(".right-main");
 // let contactPos = document.querySelector(".contact-navi");
@@ -143,9 +136,25 @@ close_mob_nav.addEventListener("click",()=>{
 //       duration:1
 //     })
 // });
-var typed = new Typed('.typer', {
-  strings: ['Web Developer',' Frontend Developer.'],
+var typed = new Typed(".typer", {
+  strings: ["Web Developer", " Frontend Developer."],
   typeSpeed: 100,
   loop: true,
   loopCount: Infinity,
+});
+
+let toggleCrcl = document.querySelector(".d-l-btn-toggle");
+let toggleBtn = document.querySelector(".d-l-m-btn");
+let light = false;
+toggleBtn.addEventListener("click", () => {
+  if (!light) {
+    console.log("sdhjg");
+    toggleCrcl.classList.remove("d-l-btn-toggle-dark");
+    toggleCrcl.classList.add("d-l-btn-toggle-light");
+    light = true;
+  } else{
+    toggleCrcl.classList.add("d-l-btn-toggle-dark");
+    toggleCrcl.classList.remove("d-l-btn-toggle-light");
+    light = false;
+  }
 });

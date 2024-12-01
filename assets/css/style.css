@@ -11,10 +11,6 @@
   font-family: VJ-Handwritten-bold;
   src: url(../font/Kalam-Bold.ttf); 
 }
-
-.bdr{
-  /* border: 2px solid red; */
-}
 * {
   padding: 0;
   margin: 0;
@@ -30,14 +26,43 @@
 
   background: pink;
 }
+:root {
+  /* Dark Theme Colors */
+  --dark-bg-primary: #11071f;
+  --dark-bg-secondary: #1c073e;
+  --dark-text-primary: #ffffff;
+  --dark-accent-primary: #542983;
+  --dark-accent-secondary: #8052b1;
+  --dark-accent-green:rgb(0, 255, 0);
+
+  /* Light Theme Colors */
+  --light-bg-primary: #f4f4f8;
+  --light-bg-secondary: #e0e0e8;
+  --light-text-primary: #1a1a2e;
+  --light-accent-primary: #6a4caf;
+  --light-accent-secondary: #9575cd;
+
+  /* Default to Dark Theme */
+  --bg-primary: var(--dark-bg-primary);
+  --bg-secondary: var(--dark-bg-secondary);
+  --text-primary: var(--dark-text-primary);
+  --accent-primary: var(--dark-accent-primary);
+  --accent-secondary: var(--dark-accent-secondary);
+}
+/* Light Theme Styles */
+body.light-theme {
+  --bg-primary: var(--light-bg-primary);
+  --bg-secondary: var(--light-bg-secondary);
+  --text-primary: var(--light-text-primary);
+  --accent-primary: var(--light-accent-primary);
+  --accent-secondary: var(--light-accent-secondary);
+}
 body {
   /* background-image: linear-gradient(#051d44, #1c073e); */
   background-color: #11071f;
-  color: white;
   padding: 8px;
   height: 97vh;
   filter: hue-rotate(360deg);
-  
 }
 a{
   text-decoration: none;
@@ -191,15 +216,20 @@ p {
   /* position: relative; */
   background-color:#542983;
   padding: 1.5px;
+  transition: all ease-in 2s;
 }
 .d-l-btn-toggle{
-  content: "";
-  /* position: absolute; */
+  position: absolute;
   width: 19px;
   height: 19px;
   border-radius: 50%;
   background-color: #8052b1;
-  top: 0.5px;
+  top: 2px;
+}
+.d-l-btn-toggle-dark{
+  right: 32px;
+}
+.d-l-btn-toggle-light{
   right: 5px;
 }
 /*============Preloader - Start==========*/
@@ -366,10 +396,9 @@ p {
     display: none;
   }
 }
-
 .contact-navi{
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   left: 20px;
   font-size: 20px;
   letter-spacing: 4px;
@@ -583,11 +612,4 @@ video{
   justify-content: center;
   align-items: center;
 
-}
-marquee{
-  background: rgb(190, 190, 190);
-
-}
-svg{
-  background-color: #f1f1f1;
 }

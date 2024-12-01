@@ -59,7 +59,6 @@ gsap.from(".textConLP h2",{
         trigger:"#cpy-cnt-sec",
         scroller:".right-main",
         start:"top 20%  ",
-        markers:true,
     }
 })
 
@@ -68,3 +67,4 @@ mouuseScale(".textConLP");
 mouuseScale(".sub-con-1");
 mouuseScale(".contact-navi");
 mouuseScale(".big");
+mouuseScale(".scroll-txt");
