@@ -62,7 +62,9 @@ body {
   background-color: #11071f;
   padding: 8px;
   height: 97vh;
+  max-width: 100vw;
   filter: hue-rotate(360deg);
+  overflow-x: hidden;
 }
 a{
   text-decoration: none;
@@ -110,6 +112,7 @@ a{
 
 .main {
   height: 100%;
+  /* width: 100vw; */
   display: flex;
   border-radius: 10px;
   gap: 10px;

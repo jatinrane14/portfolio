@@ -158,3 +158,13 @@ toggleBtn.addEventListener("click", () => {
     light = false;
   }
 });
+
+document.querySelector('.CvDwnldBtn').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.location.href = './assets/images/Profile_photo_placeholder_square.svg.png';
+});
+document.querySelector('.contact-me').addEventListener('click', function(e) {
+  e.preventDefault();
+  // Placeholder for contact functionality
+  window.location.href = 'mailto:jatinrane23@gmail.com';
+});
