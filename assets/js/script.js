@@ -63,21 +63,17 @@ window.addEventListener("mousemove", function (e) {
     { duration: 400, fill: "forwards" }
   );
 });
-
 let toggle = document.getElementsByClassName("nav-pro-img")[0];
 let nav = document.getElementsByClassName("navbar")[0];
 let navb = document.getElementsByClassName("navi")[0];
 let to_cl_li = document.getElementsByClassName("nav-slide")[0];
 let imgWhnTgl = document.getElementsByClassName("nav-pro-img")[0];
-
 // close btn nav select
 let closeBtn = document.getElementsByClassName("close-btn-nav")[0];
-
 // Nav links select
 let navLinkCTgl = document.getElementsByClassName("nav-links")[0];
 // Toggle social links
 let so_lks = document.getElementsByClassName("so-lks");
-
 function sideNavWidth(w) {
   nav.style.width = w + "px";
 }
@@ -97,19 +93,19 @@ function sideNavTglClse() {
   sideNavWidth(70);
   closeBtn.style = "display:none";
   to_cl_li.classList.remove("nav-w-toggle");
-  imgWhnTgl.classList.remove("nav-pro-img-con");
   navLinkCTgl.classList.remove("nav-links-tgl");
   closeBtn.hidden = "true";
+  setTimeout(()=>{
+    imgWhnTgl.classList.remove("nav-pro-img-con");
+  },500)
 }
 closeBtn.hidden = "true";
-
 toggle.addEventListener("click", () => {
   sideNavTgl();
 });
 closeBtn.addEventListener("click", () => {
   sideNavTglClse();
 });
-
 let mobileNavToggle = document.querySelector(".toggle-mob-nav");
 let mob_navi = document.getElementsByClassName("tab-mob-view")[0];
 let close_mob_nav = document.getElementsByClassName("nav-close-btn")[0];
@@ -124,7 +120,6 @@ close_mob_nav.addEventListener("click", () => {
     transform: "translateY(-100%)",
   });
 });
-
 // let rightConH = document.querySelector(".right-main");
 // let contactPos = document.querySelector(".contact-navi");
 // rightConH.addEventListener("mouseenter", (pos) => {
@@ -146,19 +141,26 @@ var typed = new Typed(".typer", {
 let toggleCrcl = document.querySelector(".d-l-btn-toggle");
 let toggleBtn = document.querySelector(".d-l-m-btn");
 let light = false;
+function darktoLight(){
+  document.querySelector("body").classList.add("light-theme");
+}
+function LightToDark(){
+  document.querySelector("body").classList.remove("light-theme");
+}
 toggleBtn.addEventListener("click", () => {
   if (!light) {
     console.log("sdhjg");
     toggleCrcl.classList.remove("d-l-btn-toggle-dark");
     toggleCrcl.classList.add("d-l-btn-toggle-light");
+    darktoLight();
     light = true;
   } else{
     toggleCrcl.classList.add("d-l-btn-toggle-dark");
     toggleCrcl.classList.remove("d-l-btn-toggle-light");
+    LightToDark();
     light = false;
   }
 });
-
 document.querySelector('.CvDwnldBtn').addEventListener('click', function(e) {
   e.preventDefault();
   window.location.href = './assets/images/Profile_photo_placeholder_square.svg.png';
