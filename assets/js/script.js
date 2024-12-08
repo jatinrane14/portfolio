@@ -170,3 +170,12 @@ document.querySelector('.contact-me').addEventListener('click', function(e) {
   // Placeholder for contact functionality
   window.location.href = 'mailto:jatinrane23@gmail.com';
 });
+document.addEventListener("dblclick",()=>{
+  if (!light) {
+    darktoLight();
+    light = true;
+  } else{
+    LightToDark();
+    light = false;
+  }
+})

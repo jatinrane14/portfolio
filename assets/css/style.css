@@ -27,6 +27,9 @@
   background: pink;
 }
 :root {
+  /* Fonts */
+  --font-handwriting: "VJ-Handwritten-bold";
+
   /* Dark Theme Colors */
   --dark-bg-primary: #11071f;
   --dark-bg-secondary: #1c073e;
@@ -356,7 +359,7 @@ p {
   left: 35%;
   filter: drop-shadow(2px 20px 50px #542983);
   user-select: none;
-  font-family: "VJ-Handwritten-bold";
+  font-family: var(--font-handwriting);
 }
 .grn-clr{
   color: rgb(0, 255, 0);
@@ -405,7 +408,7 @@ p {
   left: 20px;
   font-size: 20px;
   letter-spacing: 4px;
-  font-family: "VJ-Handwritten-bold";
+  font-family: var(--font-handwriting);
 
 }
 
@@ -507,11 +510,11 @@ marquee{
 }
 .skl-img-con {
  display: flex;
+ column-gap: 30px;
 }
 .tech{
   background-color: rgba(255, 255, 255, 0.222);
-  padding: 20px;
-  border-radius: 50%;
+  /* padding: 20px; */
   /* border-radius: 50%; */
 }
 .tech img{
