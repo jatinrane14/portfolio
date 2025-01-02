@@ -39,7 +39,7 @@
   --dark-accent-green:rgb(0, 255, 0);
 
   /* Light Theme Colors */
-  --light-bg-primary: #f4f4f8;
+  --light-bg-primary:whitesmoke ;
   --light-bg-secondary: #e0e0e8;
   --light-text-primary: #1a1a2e;
   --light-accent-primary: #6a4caf;
@@ -113,6 +113,32 @@ a{
   border-radius: 50px;
 }
 
+/*============Preloader - Start==========*/
+.pre-loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  position: absolute;
+  width: 100vw;
+  z-index: 5;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+}
+.loader-text h2{
+  font-size: 50px;
+  background-image: url(../assets/images/images.jpg);
+  font-family: "Jatin-Portfolio-Regular";
+  font-weight: 900;
+  color: transparent;
+  background-clip: text;
+  letter-spacing: 8px;
+}
+/*============Preloader - End==========*/
+
 .main {
   height: 100%;
   /* width: 100vw; */
@@ -171,6 +197,7 @@ p {
 .nav-lst-itm {
   display: flex;
   justify-content: center;
+  transition: all ease-in-out 0.8s;
   row-gap: px;
   flex-wrap: wrap;
   column-gap: 5px;
@@ -206,7 +233,7 @@ p {
   /* border: 2px solid red; */
 }
 .dark-lite-mode{
-  position: absolute;
+  position:absolute;
   bottom: 20px;
   width: 80%;
   display: flex;
@@ -219,10 +246,10 @@ p {
   border-radius: 30px;
   border: none;
   cursor: pointer;
-  /* position: relative; */
   background-color:#542983;
   padding: 1.5px;
   transition: all ease-in 2s;
+  position: relative;
 }
 .d-l-btn-toggle{
   position: absolute;
@@ -238,35 +265,10 @@ p {
 .d-l-btn-toggle-light{
   right: 5px;
 }
-/*============Preloader - Start==========*/
-.pre-loader{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  position: absolute;
-  width: 100vw;
-  z-index: 5;
-  height: 100vh;
-  top: 0;
-  left: 0;
-
-}
-.loader-text h2{
-  font-size: 50px;
-  background-image: url(../assets/images/images.jpg);
-  font-family: "Jatin-Portfolio-Regular";
-  font-weight: 900;
-  color: transparent;
-  background-clip: text;
-  letter-spacing: 8px;
-}
-/*============Preloader - End==========*/
 
 
 /*=======Side Navbar Start - when toggle ========*/
-.nav-w-toggle {
+.nav-w-toggle{
   background-image: url("../assets/images/background.jpg");
   width: 100%;
   position: relative;
@@ -282,6 +284,9 @@ p {
   /* border-radius: 2px solid red; */
   top: 40px;
 }
+.nav-pro-img-con img{
+  transition: all ease-in 1s;
+} 
 .close-btn-nav {
   background-color: black;
   position: absolute;
@@ -302,15 +307,23 @@ p {
   width: 80px;
   height: 80px;
 }
+.nav-lst-itm-tgl{
+  background-color: #8052b114;
+  border-radius: 0.6rem;
+  padding: 6px 20px;
+  justify-content: left;
+}
+.nav-lst-itm-tgl a{
+  margin-right: 10px;
+}
 /* .nav-lst-itm{
     display: flex;
     justify-content: left;
     align-items: center;
 } */
-/*========Side Navbar Close- when toggle ========*/
+/*========Side Navbar Code End- when toggle ========*/
 
 /*========Right Section Start - when toggle ========*/
-
 .right-main {
   height: 100%;
   border-radius: 10px;

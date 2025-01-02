@@ -20,6 +20,8 @@ setTimeout(() => {
   }, 4500);
 }, 0);
 
+
+
 // let pre_con = document.querySelector(".pre-loader");
 // let $text = document.querySelector(".loader-text h2");
 // setTimeout(() => {
@@ -41,6 +43,7 @@ setTimeout(() => {
 //   }, 4500);
 // }, 0);
 
+//Mouse Aniamate Mover
 let outline = document.querySelector(".mouse-outline");
 let un_out = document.querySelector(".mouse-un-out");
 window.addEventListener("mousemove", function (e) {
@@ -63,6 +66,7 @@ window.addEventListener("mousemove", function (e) {
     { duration: 400, fill: "forwards" }
   );
 });
+// Navigation toggle
 let toggle = document.getElementsByClassName("nav-pro-img")[0];
 let nav = document.getElementsByClassName("navbar")[0];
 let navb = document.getElementsByClassName("navi")[0];
@@ -74,6 +78,9 @@ let closeBtn = document.getElementsByClassName("close-btn-nav")[0];
 let navLinkCTgl = document.getElementsByClassName("nav-links")[0];
 // Toggle social links
 let so_lks = document.getElementsByClassName("so-lks");
+
+let OnToggleLinks = document.querySelectorAll(".nav-lst-itm");
+
 function sideNavWidth(w) {
   nav.style.width = w + "px";
 }
@@ -82,30 +89,37 @@ function sideNavTgl() {
   // closeBtn.hidden = false;
   closeBtn.style = "display:flex";
   sideNavWidth(300);
-  to_cl_li.classList.add("nav-w-toggle");
+  setTimeout(() => {
+    to_cl_li.classList.add("nav-w-toggle");
+  }, 100);
   //image container
   imgWhnTgl.classList.add("nav-pro-img-con");
-  //Nav links
-  navLinkCTgl.classList.add("nav-links-tgl");
+
+  for (let i = 0; i < OnToggleLinks.length; i++) {
+    OnToggleLinks[i].classList.add("nav-lst-itm-tgl");
+  }
   so_lks.toggle = "active";
 }
-function sideNavTglClse() {
-  sideNavWidth(70);
+async function sideNavTglClse() {
+  sideNavWidth(70); 
   closeBtn.style = "display:none";
   to_cl_li.classList.remove("nav-w-toggle");
-  navLinkCTgl.classList.remove("nav-links-tgl");
   closeBtn.hidden = "true";
-  setTimeout(()=>{
-    imgWhnTgl.classList.remove("nav-pro-img-con");
-  },500)
+  imgWhnTgl.classList.remove("nav-pro-img-con");
+  for (let i = 0; i < OnToggleLinks.length; i++) {
+    OnToggleLinks[i].classList.remove("nav-lst-itm-tgl");
+  }
 }
 closeBtn.hidden = "true";
+
+// Add Event on toggle button
 toggle.addEventListener("click", () => {
   sideNavTgl();
 });
 closeBtn.addEventListener("click", () => {
   sideNavTglClse();
 });
+
 let mobileNavToggle = document.querySelector(".toggle-mob-nav");
 let mob_navi = document.getElementsByClassName("tab-mob-view")[0];
 let close_mob_nav = document.getElementsByClassName("nav-close-btn")[0];
@@ -116,10 +130,11 @@ mobileNavToggle.addEventListener("click", () => {
   });
 });
 close_mob_nav.addEventListener("click", () => {
-  gsap.to(".tab-mob-view", {
+  gsap.to(".tab-mob-view", {  
     transform: "translateY(-100%)",
   });
 });
+
 // let rightConH = document.querySelector(".right-main");
 // let contactPos = document.querySelector(".contact-navi");
 // rightConH.addEventListener("mouseenter", (pos) => {
@@ -138,13 +153,17 @@ var typed = new Typed(".typer", {
   loopCount: Infinity,
 });
 
+function iconColor() {}
+
 let toggleCrcl = document.querySelector(".d-l-btn-toggle");
 let toggleBtn = document.querySelector(".d-l-m-btn");
 let light = false;
-function darktoLight(){
+document.querySelector("box-icon").setAttribute("color",'#FFF')
+function darktoLight() {
+  document.querySelector("box-icon").setAttribute("color",black)
   document.querySelector("body").classList.add("light-theme");
 }
-function LightToDark(){
+function LightToDark() {
   document.querySelector("body").classList.remove("light-theme");
 }
 toggleBtn.addEventListener("click", () => {
@@ -154,28 +173,29 @@ toggleBtn.addEventListener("click", () => {
     toggleCrcl.classList.add("d-l-btn-toggle-light");
     darktoLight();
     light = true;
-  } else{
+  } else {
     toggleCrcl.classList.add("d-l-btn-toggle-dark");
     toggleCrcl.classList.remove("d-l-btn-toggle-light");
     LightToDark();
     light = false;
   }
 });
-document.querySelector('.CvDwnldBtn').addEventListener('click', function(e) {
+document.querySelector(".CvDwnldBtn").addEventListener("click", function (e) {
   e.preventDefault();
-  window.location.href = './assets/images/Profile_photo_placeholder_square.svg.png';
+  window.location.href =
+    "./assets/images/Profile_photo_placeholder_square.svg.png";
 });
-document.querySelector('.contact-me').addEventListener('click', function(e) {
+document.querySelector(".contact-me").addEventListener("click", function (e) {
   e.preventDefault();
   // Placeholder for contact functionality
-  window.location.href = 'mailto:jatinrane23@gmail.com';
+  window.location.href = "mailto:jatinrane23@gmail.com";
 });
-document.addEventListener("dblclick",()=>{
+document.addEventListener("dblclick", () => {
   if (!light) {
     darktoLight();
     light = true;
-  } else{
+  } else {
     LightToDark();
     light = false;
   }
-})
+});

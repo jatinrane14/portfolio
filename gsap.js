@@ -66,5 +66,5 @@ gsap.from(".textConLP h2",{
 mouuseScale(".textConLP");
 mouuseScale(".sub-con-1");
 mouuseScale(".contact-navi");
-mouuseScale(".big");
+// mouuseScale(".big");
 mouuseScale(".scroll-txt");
