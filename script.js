@@ -20,29 +20,6 @@ setTimeout(() => {
   }, 4500);
 }, 0);
 
-
-
-// let pre_con = document.querySelector(".pre-loader");
-// let $text = document.querySelector(".loader-text h2");
-// setTimeout(() => {
-//   setTimeout(() => {
-//     $text.animate({
-//       fontSize: "250px",
-//     },{duration: 1000, fill: "forwards"})
-//   }, 1000);
-//   setTimeout(() => {
-//     pre_con.animate(
-//       {
-//         height: 0,
-//       },
-//       { duration: 1500, fill: "forwards" }
-//     );
-//     setTimeout(() => {
-//       pre_con.remove("visiblity");
-//     }, 1500);
-//   }, 4500);
-// }, 0);
-
 //Mouse Aniamate Mover
 let outline = document.querySelector(".mouse-outline");
 let un_out = document.querySelector(".mouse-un-out");
@@ -66,6 +43,11 @@ window.addEventListener("mousemove", function (e) {
     { duration: 400, fill: "forwards" }
   );
 });
+
+Shery.mouseFollower();
+Shery.makeMagnet(".magnet");
+
+
 // Navigation toggle
 let toggle = document.getElementsByClassName("nav-pro-img")[0];
 let nav = document.getElementsByClassName("navbar")[0];
@@ -84,7 +66,9 @@ let OnToggleLinks = document.querySelectorAll(".nav-lst-itm");
 function sideNavWidth(w) {
   nav.style.width = w + "px";
 }
+
 closeBtn.style = "display:none";
+
 function sideNavTgl() {
   // closeBtn.hidden = false;
   closeBtn.style = "display:flex";
@@ -135,25 +119,15 @@ close_mob_nav.addEventListener("click", () => {
   });
 });
 
-// let rightConH = document.querySelector(".right-main");
-// let contactPos = document.querySelector(".contact-navi");
-// rightConH.addEventListener("mouseenter", (pos) => {
-//   let cPosX = contactPos.getBoundingClientRect().x;
-//   let cPosY = contactPos.getBoundingClientRect().y;
-//     gsap.to(".contact-navi h4",{
-//       // x:() ,
-//       y:2,
-//       duration:1
-//     })
-// });
+
 var typed = new Typed(".typer", {
-  strings: ["Web Developer", " Frontend Developer."],
+  strings: ["Web Developer", " Frontend Developer","Programmer"],
   typeSpeed: 100,
   loop: true,
   loopCount: Infinity,
 });
 
-function iconColor() {}
+
 
 let toggleCrcl = document.querySelector(".d-l-btn-toggle");
 let toggleBtn = document.querySelector(".d-l-m-btn");
@@ -180,20 +154,23 @@ toggleBtn.addEventListener("click", () => {
     light = false;
   }
 });
+
 document.querySelector(".CvDwnldBtn").addEventListener("click", function (e) {
   e.preventDefault();
   window.location.href =
     "./assets/images/Profile_photo_placeholder_square.svg.png";
 });
+
 document.querySelector(".contact-me").addEventListener("click", function (e) {
   e.preventDefault();
   // Placeholder for contact functionality
   window.location.href = "mailto:jatinrane23@gmail.com";
 });
+
 document.addEventListener("dblclick", () => {
   if (!light) {
     darktoLight();
-    light = true;
+    light = true; 
   } else {
     LightToDark();
     light = false;
