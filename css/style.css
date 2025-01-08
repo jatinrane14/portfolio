@@ -80,7 +80,7 @@ a{
   top: 50px;
   left: 0;
   z-index: 2;
-  background-color: var(--accent-secondary);
+  background-color: white;
   box-shadow: 20px 20px 70px pink;
 }
 .mouse-un-out{
@@ -93,7 +93,7 @@ a{
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: pink;
+  background-color: #542983;
 }
 ::-webkit-scrollbar {
   width: 3px;
@@ -104,7 +104,7 @@ a{
   border-radius: 1110px;
 }
 ::-webkit-scrollbar-thumb {
-  background: orangered;
+  background: var(--dark-bg-secondary);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
@@ -138,7 +138,13 @@ a{
   letter-spacing: 8px;
 }
 /*============Preloader - End==========*/
-
+#particles-canvas {
+  position: absolute  ;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.3;
+}
 .main {
   height: 100%;
   /* width: 100vw; */
@@ -151,6 +157,7 @@ a{
   background-color: 0.8, hsl(218, 23%, 16%);
   width: 75px;
   border: 1px solid rgba(245, 222, 179, 0.445);
+  /* border: 1px solid #542983; */
   position: relative;
   transition: all ease-in-out 0.8s;
 }
@@ -375,7 +382,7 @@ p {
   position: absolute;
   top: 0;
   left: 35%;
-  filter: drop-shadow(2px 20px 50px #542983);
+  /* filter: drop-shadow(2px 20px 50px #542983); */
   user-select: none;
   font-family: var(--font-handwriting);
 }
@@ -386,7 +393,7 @@ p {
 .sub-con-1{
   /* line-height: 50px; */
   font-size: 1.7vw;
-  filter: drop-shadow(2px 20px 50px #542983);
+  /* filter: drop-shadow(2px 20px 50px #542983); */
   margin-bottom: 30px;
   letter-spacing: 2px;
 }
@@ -557,6 +564,7 @@ marquee{
 }
 .technobox img {
   width: 25px;
+  height: 25px;
 }
 .technobox span{
   font-size: 15px;
@@ -646,6 +654,15 @@ video{
 .textConLP h2{
     font-size: 4vw;
     text-align: center;
+}
+.social-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.social-icons div{
+  border: 1px solid green;
 }
 .copyrightLPP{
   height: 10%;

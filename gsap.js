@@ -68,3 +68,4 @@ mouuseScale(".sub-con-1");
 mouuseScale(".contact-navi");
 // mouuseScale(".big");
 mouuseScale(".scroll-txt");
+mouuseScale(".nav-lst-itm");

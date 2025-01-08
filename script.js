@@ -134,12 +134,14 @@ let toggleBtn = document.querySelector(".d-l-m-btn");
 let light = false;
 document.querySelector("box-icon").setAttribute("color",'#FFF')
 function darktoLight() {
-  document.querySelector("box-icon").setAttribute("color",black)
+  // document.querySelector("box-icon").setAttribute("color",black)
   document.querySelector("body").classList.add("light-theme");
 }
+
 function LightToDark() {
   document.querySelector("body").classList.remove("light-theme");
 }
+
 toggleBtn.addEventListener("click", () => {
   if (!light) {
     console.log("sdhjg");
@@ -147,6 +149,7 @@ toggleBtn.addEventListener("click", () => {
     toggleCrcl.classList.add("d-l-btn-toggle-light");
     darktoLight();
     light = true;
+    console.log('sjbf');
   } else {
     toggleCrcl.classList.add("d-l-btn-toggle-dark");
     toggleCrcl.classList.remove("d-l-btn-toggle-light");
