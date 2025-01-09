@@ -21,11 +21,11 @@
     </div>
     <div class="mouse-un-out">
     </div>
-    <!-- <div class="pre-loader">
+    <div class="pre-loader">
         <div class="loader-text">
             <h2></h2>
         </div>
-    </div> -->
+    </div>
     <main class="main">
         <nav class="navbar">
             <div class="navbar-in-con">
@@ -66,9 +66,9 @@
                         <li class="
                         magnet">
                             <div class="nav-lst-itm">
-                                <a href="#contact-sec">
+                                <a href="#intro-section">
                                     <box-icon name='user' color='#ffffff' ></box-icon>
-                                <a href="#contact-sec">
+                                <a href="#intro-section">
                                     <span>About</span>
                                 </a>
                             </div>
@@ -147,16 +147,16 @@
                 </div>
 
                 <div class="scroll-txt magnet">
-                    <box-icon class="chevron-down-svg" name='chevrons-down' type='solid'
+                    <box-icon color="#fff" class="chevron-down-svg" name='chevrons-down' type='solid'
                         animation='flashing'></box-icon>
-                    <svg class="text-rotateSvg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <svg color="#fff" class="text-rotateSvg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <path fill="transparent" id="circlePath" d="
       M 10, 50
       a 40,40 0 1,1 80,0
       40,40 0 1,1 -80,0
     " />
                         <text>
-                            <textPath href="#circlePath" fill="white">
+                            <textPath href="#circlePath" fill="#fff">
                                 * Scoll down * Scroll Down * Scroll Down
                             </textPath>
                         </text>
@@ -180,13 +180,14 @@
                         <div class="textslider">
                             <h2>I'm a <span class="typer">Frontend Developer</span></h2>
                         </div>
-                        <p>I am currenty pursuing B.tech Degree in Computer Science Engineering from Shri Vaishnav Vidhyapeeth Vishwavidhalaya. A passionate frontend developer with a solid foundation in programming languages. I’m always eager to learn and explore new technologies to create innovative and engaging web experiences.</p>
+                        <p>I am currenty pursuing B.tech Degree in Computer Science Engineering from Shri Vaishnav Vidhyapeeth Vishwavidhalaya. A passionate frontend developer with a solid foundation in programming languages. I’m always eager to learn and explore new technologies to create innovative and engaging web experiences.
+                        </p>
                     </div>
                     <div class="info-btn">
                         <button class="CvDwnldBtn btn">
                             Download CV
                         </button>
-                        <button class="contact-me btn">Contact Us</button>
+                        <button onclick="redirectToMail()" class="contact-me btn">Contact Us</button>
                     </div>
                 </div>
             </div>
@@ -347,32 +348,7 @@
                         <div class="slider">
                             <div class="prj-contn">
                                 <div>
-                                    
                                     <div class="">
-                                        <div class="description">
-                                            <div class="project-txt">
-                                                <h3>SunSky</h3>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-                                                perspiciatis laudantium sapiente expedita accusamus aperiam non ea,
-                                                similique nisi alias recusandae molestiae, exercitationem aspernatur
-                                                amet</p>
-                                                <div class="project-buttons">
-                                                    <button class="btn">View Code</button>
-                                                    <button class="btn">Live Preview</button>
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="project-video">
-                                    <video muted autoplay src="./assets/Videos/Recording 2024-07-13 182413.mp4"></video>
-                                </div>
-                            </div>
-                            
-                            <div class="prj-contn">
-                                <div>
-                                    <div class="">
-                                        
                                         <div class="description">
                                             <div class="project-txt">
                                                 <h3>Tik Tak Toi</h3>
@@ -388,6 +364,25 @@
                                 </div>
                                 <div class="project-video">
                                     <video muted autoplay src="./assets/Videos/TikTakToi.mp4"></video>
+                                </div>
+                            </div>
+                            <div class="prj-contn">
+                                <div>
+                                    <div class="">
+                                        <div class="description">
+                                            <div class="project-txt">
+                                                <h3>Weather App</h3>
+                                            </div>
+                                            <p>WeatherWise provides real-time weather updates with an easy-to-use interface. Stay informed about current conditions. It is developed using basic web technology(HTML,CSS,JS).</p>
+                                                <div class="project-buttons">
+                                                    <button onclick="window.open('https://github.com/jatinrane14/Weather-App/')" class="btn">View Code</button>
+                                                    <button onclick="window.open('https://jatinrane14.github.io/Weather-App/')" class="btn">Live Preview</button>
+                                                </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-video">
+                                    <video muted autoplay src="./assets/Videos/weather.mp4"></video>
                                 </div>
                             </div>
                         </div>
@@ -416,7 +411,7 @@
                         </a>
                     </div>
                     <div class="copyrightLPP">
-                        <p>2024 Created by Jatin Rane
+                        <p>2025 Created by Jatin Rane
                             All Rights Reserved</p>
                     </div>
                 </section>

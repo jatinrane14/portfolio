@@ -142,33 +142,33 @@ function LightToDark() {
   document.querySelector("body").classList.remove("light-theme");
 }
 
-toggleBtn.addEventListener("click", () => {
-  if (!light) {
-    console.log("sdhjg");
-    toggleCrcl.classList.remove("d-l-btn-toggle-dark");
-    toggleCrcl.classList.add("d-l-btn-toggle-light");
-    darktoLight();
-    light = true;
-    console.log('sjbf');
-  } else {
-    toggleCrcl.classList.add("d-l-btn-toggle-dark");
-    toggleCrcl.classList.remove("d-l-btn-toggle-light");
-    LightToDark();
-    light = false;
-  }
-});
+// toggleBtn.addEventListener("click", () => {
+//   if (!light) {
+//     console.log("sdhjg");
+//     toggleCrcl.classList.remove("d-l-btn-toggle-dark");
+//     toggleCrcl.classList.add("d-l-btn-toggle-light");
+//     darktoLight();
+//     light = true;
+//     console.log('sjbf');
+//   } else {
+//     toggleCrcl.classList.add("d-l-btn-toggle-dark");
+//     toggleCrcl.classList.remove("d-l-btn-toggle-light");
+//     LightToDark();
+//     light = false;
+//   }
+// });
 
 document.querySelector(".CvDwnldBtn").addEventListener("click", function (e) {
   e.preventDefault();
   window.location.href =
     "./assets/JatinResume.pdf";
 });
-document.addEventListener("dblclick", () => {
-  if (!light) {
-    darktoLight();
-    light = true; 
-  } else {
-    LightToDark();
-    light = false;
-  }
-});
+// document.addEventListener("dblclick", () => {
+//   if (!light) {
+//     darktoLight();
+//     light = true; 
+//   } else {
+//     LightToDark();
+//     light = false;
+//   }
+// });

@@ -157,7 +157,6 @@ a{
   background-color: 0.8, hsl(218, 23%, 16%);
   width: 75px;
   border: 1px solid rgba(245, 222, 179, 0.445);
-  /* border: 1px solid #542983; */
   position: relative;
   transition: all ease-in-out 0.8s;
 }
@@ -170,10 +169,8 @@ li {
   align-items: center;
   padding: 10px;
   row-gap: 30px;
-  
   transition: all ease-in-out 1s;
 }
-
 .nav-links {
   width: 100%;
 }
@@ -181,7 +178,6 @@ li {
   display: flex;
   flex-direction: column;
   row-gap: 22px;
-  /* border: 2px solid red; */
 }
 p {
   text-align: center;
@@ -209,7 +205,6 @@ p {
   flex-wrap: wrap;
   column-gap: 5px;
   align-items: center;
-  /* padding-left: 20px; */
 }
 .nav-lst-itm svg {
   padding: 5px;
@@ -237,7 +232,6 @@ p {
 .so-lks {
   display: none;
   background-color: var(--text-primary);
-  /* border: 2px solid red; */
 }
 .dark-lite-mode{
   position:absolute;
@@ -247,24 +241,22 @@ p {
   justify-content: center;
 }
 .d-l-m-btn{
-  /* padding: 22px; */
   width: 50px;
   height: 20px;
   border-radius: 30px;
   border: none;
   cursor: pointer;
-  background-color:#542983;
   padding: 1.5px;
   transition: all ease-in 2s;
   position: relative;
+  border: 1px solid #542983;
 }
 .d-l-btn-toggle{
   position: absolute;
-  width: 19px;
-  height: 19px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background-color: var(--accent-secondary);
-  top: 2px;
+  border: 1px solid white;
 }
 .d-l-btn-toggle-dark{
   right: 32px;
@@ -394,7 +386,7 @@ p {
   /* line-height: 50px; */
   font-size: 1.7vw;
   /* filter: drop-shadow(2px 20px 50px #542983); */
-  margin-bottom: 30px;
+  margin-bottom: 30px;  
   letter-spacing: 2px;
 }
 .scroll-txt{ 
@@ -454,7 +446,7 @@ p {
   align-items: start;
   flex-direction: column;
   /* border: 2px solid red; */
-  row-gap: 50px;
+  row-gap: 30px;
 }
   .intro-sub-con h2{
   font-size: 50px;
@@ -469,6 +461,9 @@ p {
   text-align: left;
   font-size: 25px;
   margin-top: 10px;
+}
+.info-btn{
+  /* border: 2px solid red; */
 }
 .btn{
   background-color: transparent;
@@ -485,6 +480,9 @@ p {
   cursor: pointer;
   color: white;
   transition: all ease-in-out .5s;
+}
+.btn:last-child{
+  margin-left: 20px;
 }
 /*Another SEction*/
 #section {
