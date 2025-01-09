@@ -24,6 +24,20 @@ gsap.from(".tech-head> h1",{
         end:"top 10%"
     }
 })
+
+gsap.from(".project-head> h1",{
+    opacity:0,
+    y:30,
+    stagger:0.1,
+    scrollTrigger:{
+        trigger:".project-head",
+        scroller: ".right-main",
+        // markers:true,
+        scrub:true,
+        end:"top 10%"
+    }
+})
+
 setTimeout(() => {
     gsap.from(".name-absolute p",{
         // opacity:0,
@@ -43,7 +57,7 @@ setTimeout(() => {
 }, 5000);
 //Page -1  Scroll Text
 gsap.to(".prj-contn",{
-    transform:"translateX(-325%)",
+    transform:"translateX(-110%)",
     scrollTrigger:{
         trigger:"#project-sec",
         scroller:".right-main",

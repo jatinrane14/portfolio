@@ -1,4 +1,14 @@
 @media screen and (max-width: 800px) {
+    .overlay-mssg{
+        width: 100vw;
+        height: 100vh;
+        display: block  ;
+        text-align: center;
+        overflow: hidden;
+      }
+    .main{
+        display: none;
+    }
     .navbar{
         display: none;
     }

@@ -161,15 +161,8 @@ toggleBtn.addEventListener("click", () => {
 document.querySelector(".CvDwnldBtn").addEventListener("click", function (e) {
   e.preventDefault();
   window.location.href =
-    "./assets/images/Profile_photo_placeholder_square.svg.png";
+    "./assets/JatinResume.pdf";
 });
-
-document.querySelector(".contact-me").addEventListener("click", function (e) {
-  e.preventDefault();
-  // Placeholder for contact functionality
-  window.location.href = "mailto:jatinrane23@gmail.com";
-});
-
 document.addEventListener("dblclick", () => {
   if (!light) {
     darktoLight();

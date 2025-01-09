@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=2.0">
     <meta name="description" content="Hello, I'm Jatin Rane">
+    <meta name="keywords" content="portfolio, projects, jatin">
     <title>Jatin Rane</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/responsive.css">
@@ -12,17 +13,19 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 
-<body>
-
+<body>  
+    <div class="overlay-mssg">
+        <h1>This Website is not more responsive yet! PLease open in your Desktop System.</h1>
+    </div>
     <div class="mouse-outline">
     </div>
     <div class="mouse-un-out">
     </div>
-    <div class="pre-loader">
+    <!-- <div class="pre-loader">
         <div class="loader-text">
             <h2></h2>
         </div>
-    </div>
+    </div> -->
     <main class="main">
         <nav class="navbar">
             <div class="navbar-in-con">
@@ -63,8 +66,18 @@
                         <li class="
                         magnet">
                             <div class="nav-lst-itm">
+                                <a href="#contact-sec">
+                                    <box-icon name='user' color='#ffffff' ></box-icon>
+                                <a href="#contact-sec">
+                                    <span>About</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="
+                        magnet">
+                            <div class="nav-lst-itm">
                                 <a href="#project-sec">
-                                    <img src="./assets/images/home.svg" alt="project" srcset="">
+                                    <box-icon name='expand-horizontal' color="#fff"></box-icon>
                                 </a>
                                 <a href="#project-sec">
                                     <span>Projects</span>
@@ -75,20 +88,10 @@
                         magnet">
                             <div class="nav-lst-itm">
                                 <a href="#skill-sec">
-                                    <img src="./assets/images/bx-bulb.svg" alt="Skills" srcset="">
+                                    <box-icon name='cog' color="#fff"></box-icon>
                                 </a>
                                 <a href="#skill-sec">
                                     <span>Skills</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="
-                        magnet">
-                            <div class="nav-lst-itm">
-                                <a href="#contact-sec">
-                                    <img src="./assets/images/bxs-contact.svg" alt="contact" srcset=""> </a>
-                                <a href="#contact-sec">
-                                    <span>Contact</span>
                                 </a>
                             </div>
                         </li>
@@ -159,7 +162,7 @@
                         </text>
                     </svg>
                 </div>
-                <div class="contact-navi magnet">
+                <div onclick="redirectToMail()" class="contact-navi magnet">
                     <h3><a href="#">Contact</a></h3>
                 </div>
 
@@ -180,10 +183,10 @@
                         <p>I am currenty pursuing B.tech Degree in Computer Science Engineering from Shri Vaishnav Vidhyapeeth Vishwavidhalaya. A passionate frontend developer with a solid foundation in programming languages. I’m always eager to learn and explore new technologies to create innovative and engaging web experiences.</p>
                     </div>
                     <div class="info-btn">
-                        <button class="CvDwnldBtn">
+                        <button class="CvDwnldBtn btn">
                             Download CV
                         </button>
-                        <button class="contact-me">Contact Us</button>
+                        <button class="contact-me btn">Contact Us</button>
                     </div>
                 </div>
             </div>
@@ -330,21 +333,34 @@
                     <hr>
                 </div>
                 <div id="project-sec">
+                    <div class="project-head">
+                        <h1>P</h1>
+                        <h1>R</h1>
+                        <h1>O</h1>
+                        <h1>J</h1>
+                        <h1>E</h1>
+                        <h1>C</h1>
+                        <h1>T</h1>
+                        <h1>S</h1>
+                    </div>
                     <div class="project-con-sec">
                         <div class="slider">
                             <div class="prj-contn">
                                 <div>
-                                    <div class="project-txt">
-                                        <h3>Featured Project</h3>
-                                        <h4>SunSky</h4>
-                                    </div>
+                                    
                                     <div class="">
                                         <div class="description">
+                                            <div class="project-txt">
+                                                <h3>SunSky</h3>
+                                            </div>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
                                                 perspiciatis laudantium sapiente expedita accusamus aperiam non ea,
                                                 similique nisi alias recusandae molestiae, exercitationem aspernatur
-                                                amet
-                                                dolorum consectetur. Quibusdam, deserunt unde!</p>
+                                                amet</p>
+                                                <div class="project-buttons">
+                                                    <button class="btn">View Code</button>
+                                                    <button class="btn">Live Preview</button>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -352,66 +368,26 @@
                                     <video muted autoplay src="./assets/Videos/Recording 2024-07-13 182413.mp4"></video>
                                 </div>
                             </div>
+                            
                             <div class="prj-contn">
                                 <div>
-                                    <div class="project-txt">
-                                        <h3>Featured Project</h3>
-                                        <h4>Weather App</h4>
-                                    </div>
                                     <div class="">
+                                        
                                         <div class="description">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-                                                perspiciatis laudantium sapiente expedita accusamus aperiam non ea,
-                                                similique nisi alias recusandae molestiae, exercitationem aspernatur
-                                                amet
-                                                dolorum consectetur. Quibusdam, deserunt unde!</p>
+                                            <div class="project-txt">
+                                                <h3>Tik Tak Toi</h3>
+                                            </div>
+                                            <p>Tik Tak Toi is a modern twist on the classic Tic-Tac-Toe game, designed to provide an engaging and interactive experience for players of all ages. Built with a focus on intuitive design and smooth gameplay, Tik Tak Toi brings the traditional 3x3 grid game to life with vibrant visuals and intelligent features.
+                                                </p>
+                                            <div class="project-buttons">
+                                                <button onclick="window.open('https://github.com/jatinrane14/Tik-TacToi-Game/')" class="btn">View Code</button>
+                                                <button onclick="window.open('https://jatinrane14.github.io/Tik-TacToi-Game/')" class="btn">Live Preview</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="project-video">
-                                    <video muted autoplay src="./assets/Videos/Recording 2024-07-13 182413.mp4"></video>
-                                </div>
-                            </div>
-                            <div class="prj-contn">
-                                <div>
-                                    <div class="project-txt">
-                                        <h3>Featured Project</h3>
-                                        <h4>Project Name</h4>
-                                    </div>
-                                    <div class="">
-                                        <div class="description">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-                                                perspiciatis laudantium sapiente expedita accusamus aperiam non ea,
-                                                similique nisi alias recusandae molestiae, exercitationem aspernatur
-                                                amet
-                                                dolorum consectetur. Quibusdam, deserunt unde!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="project-video">
-
-                                    <video muted autoplay src="./assets/Videos/Recording 2024-07-13 182413.mp4"></video>
-                                </div>
-                            </div>
-                            <div class="prj-contn">
-                                <div>
-                                    <div class="project-txt">
-                                        <h3>Featured Project</h3>
-                                        <h4>Tik Tak Toi</h4>
-                                    </div>
-                                    <div class="">
-                                        <div class="description">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-                                                perspiciatis laudantium sapiente expedita accusamus aperiam non ea,
-                                                similique nisi alias recusandae molestiae, exercitationem aspernatur
-                                                amet
-                                                dolorum consectetur. Quibusdam, deserunt unde!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="project-video">
-
-                                    <video muted autoplay src="./assets/Videos/Recording 2024-07-13 182413.mp4"></video>
+                                    <video muted autoplay src="./assets/Videos/TikTakToi.mp4"></video>
                                 </div>
                             </div>
                         </div>
@@ -435,7 +411,9 @@
                         <a target="_blank" href="https://github.com/"><box-icon type='logo' name='github' color="#fff"></box-icon></a>
                         <a target="_blank" href="https://www.linkedin.com/in/jatinrane/"><box-icon name='linkedin-square' type='logo' color='#ffffff'></box-icon></a>
                         <a target="_blank" href=""><box-icon name='twitter' type='logo' color='#ffffff'></box-icon></a>
-
+                        <a target="_blank" href="https://mail.google.com/mail/u/0/#inbox/jatinrane23@gmail.com">
+                            <box-icon color="#fff" name='mail-send'></box-icon>
+                        </a>
                     </div>
                     <div class="copyrightLPP">
                         <p>2024 Created by Jatin Rane
@@ -455,6 +433,12 @@
     <script src="./particle.js"></script>
     <script src="./gsap.js"></script>
     <script src="./script.js"></script>
+    <script>
+        function redirectToMail(){
+            let email = "https://mail.google.com/mail/u/0/#inbox/jatinrane23@gmail.com";
+            window.location.href = email;
+        }
+    </script>
 </body>
 
 </html>
