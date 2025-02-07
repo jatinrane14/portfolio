@@ -1,4 +1,16 @@
 @media screen and (max-width: 800px) {
+    body{
+        padding: 0;
+    }
+    .main{
+        gap: 0;
+    }
+    ::-webkit-scrollbar{
+        width: 0;
+    }
+        .right-main {
+        border: none;
+    }
     .overlay-mssg{
         width: 100vw;
         height: 100vh;
@@ -6,9 +18,9 @@
         text-align: center;
         overflow: hidden;
       }
-    .main{
+    /* .main{
         display: none;
-    }
+    } */
     .navbar{
         display: none;
     }
@@ -34,10 +46,9 @@
      }
     .toggle-mob-nav a{
         width: 20px;
-        border: 1px solid black;
+        border: 1px solid white;
         color: blanchedalmond;
     }
-    
     .tab-mob-view{
         position:absolute;
         top: 0;
@@ -82,7 +93,9 @@
     .toggle-mob-nav{
         
     }
-
+    .tech-head > h1{
+        font-size: 2vw;
+    }
 
     /* DIsplay NONE Wale yaha pe */
     /* .arrow{ */
@@ -97,4 +110,22 @@
     .contact-navi{
         display: none;
     } */
+}
+
+@media screen and (max-width: 1020px){
+    .intro-sub-con{
+        padding: 0 30px;
+    }
+    
+}
+@media screen and (max-width: 1076px){
+    .tech-head > h1{
+        font-size: 5vw;
+    }
+    .textslider > h2{
+        font-size: 5vw;
+    }
+    .intro-para{
+        font-size: 2vw;
+    }
 }
