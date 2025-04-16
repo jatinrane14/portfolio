@@ -1,6 +1,7 @@
 @media screen and (max-width: 800px) {
     body{
         padding: 0;
+
     }
     .main{
         gap: 0;
@@ -16,7 +17,8 @@
         height: 100vh;
         display: block  ;
         text-align: center;
-        overflow: hidden;
+        position: absolute;
+        z-index: 100;
       }
     /* .main{
         display: none;
@@ -64,8 +66,17 @@
     }
     .nav-close-btn{
         position: absolute;
-        top: 15p;
+        top: 15px;
         right: 15px;
+        font-size: 15px;
+        padding: 8px;
+        background-color: transparent;
+    }
+    .nav-close-btn button   {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 15px;
     }
     .tab-mob-view ul {
         
@@ -116,16 +127,15 @@
     .intro-sub-con{
         padding: 0 30px;
     }
-    
 }
 @media screen and (max-width: 1076px){
     .tech-head > h1{
         font-size: 5vw;
     }
     .textslider > h2{
-        font-size: 5vw;
+        font-size: 2vw;
     }
     .intro-para{
-        font-size: 2vw;
+        font-size: 5vw;
     }
 }

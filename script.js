@@ -161,7 +161,7 @@ function LightToDark() {
 document.querySelector(".CvDwnldBtn").addEventListener("click", function (e) {
   e.preventDefault();
   window.location.href =
-    "./assets/JatinResume.pdf";
+    "./assets/JatinResume[1].pdf";
 });
 // document.addEventListener("dblclick", () => {
 //   if (!light) {
