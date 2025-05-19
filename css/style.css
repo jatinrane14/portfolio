@@ -11,6 +11,10 @@
   font-family: VJ-Handwritten-bold;
   src: url(../assets/font/Kalam-Bold.ttf); 
 }
+@font-face {
+  font-family: HackoByte;
+  src: url(../assets/font/hackMo.woff2); 
+}
 * {
   padding: 0;
   margin: 0;
@@ -517,6 +521,7 @@ marquee{
   justify-content: center;
   align-items: center;
   font-size: 45px;
+  font-family: "HackoByte";
 }
 .skills-con{
   display: flex;  
