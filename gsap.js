@@ -56,16 +56,33 @@ setTimeout(() => {
     });
 }, 5000);
 //Page -1  Scroll Text
-gsap.to(".prj-contn",{
-    transform:"translateX(-110%)",
-    scrollTrigger:{
-        trigger:"#project-sec",
-        scroller:".right-main",
-        // markers:true,
-        scrub:true,
-        pin:true
+
+// Horizontal Project Slider Animation
+
+gsap.to(".slider", {
+    xPercent: -75,
+    ease: "none",
+
+    scrollTrigger: {
+        trigger: "#project-sec",
+        scroller: ".right-main",
+        start: "top top",
+
+        end: () => {
+            const slider = document.querySelector(".slider");
+            const container = document.querySelector(".project-con-sec");
+
+            return "+=" + (
+                slider.scrollWidth - container.clientWidth
+            );
+        },
+
+        scrub: 1,
+        pin: true,
+        invalidateOnRefresh: true
     }
-})
+});
+
 gsap.from(".textConLP h2",{
     opacity:0,
     y:50,

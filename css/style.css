@@ -461,6 +461,7 @@ p {
 }
 .typer{
   color: var(--dark-accent-primary);
+  color: rgb(2, 208, 2);
 }
 .intro-sub-con p {
   text-align: left;
@@ -510,7 +511,7 @@ marquee{
 /*Skills PAge*/
 #skill-sec{
   /* border: 2px solid red; */
-  height: 90vh;
+  height: 100%;
 }
 #skill-sec .tech-head{
   display: flex;
@@ -523,124 +524,360 @@ marquee{
   font-size: 45px;
   font-family: "HackoByte";
 }
-.skills-con{
-  display: flex;  
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 80%;
-  height:79%;
-  margin: auto;
-  align-items: center;
-}
-.skill-card{
-  background-color: rgba(17, 25, 40, 0.83);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 18px;
-  border-radius:20px;
-  border: 2px solid #1c2331;
-  box-shadow: 5px 5px 15px #090e24;  
-  width: 45%;
-  flex-direction: column;
-}
-.skill-card-subcon1{
-  color: gray;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 30px;
-}
-.skill-card-subcon2{
-  display: flex;
-  justify-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+/* Skills Section */
+#skill-sec {
+    height: 100%;
 }
 
-.technobox{
-  border: 1px solid gray; 
-  border-radius: 10px;
-  padding: 8px;
-  display: flex;
-  gap: 5px;
+/* Keep your existing heading CSS unchanged */
+
+/* Skills Grid */
+.skills-con {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto;
+    gap: 35px;
+    width: 82%;
+    margin: 20px auto;
+    align-items: stretch;
+    border: none;
 }
+
+/* Individual Skill Cards */
+.skill-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 190px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px 20px;
+    border-radius: 25px;
+    background: linear-gradient(
+        135deg,
+        rgba(17, 25, 40, 0.96),
+        rgba(12, 17, 31, 0.92)
+    );
+
+    border: 1px solid rgb(2, 208, 2);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35),
+        inset 0 0 20px rgba(255, 40, 40, 0.025);
+
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Decorative top-right lines */
+.skill-card::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    width: 35px;
+    height: 4px;
+
+    background: rgb(2, 208, 2);
+    transform: skewX(-45deg);
+
+    box-shadow: 12px 0 rgb(2, 208, 2), 24px 0 rgb(2, 208, 2);
+    opacity: 0.85;
+}
+
+/* Bottom decorative accent */
+.skill-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 18%;
+
+    width: 85px;
+    height: 6px;
+
+    background: rgb(2, 208, 2);
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 15px rgb(2, 208, 2);
+}
+
+/* Hover Effect */
+.skill-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.5),
+        0 0 18px rgba(2, 208, 2, 0.537),
+        inset 0 0 25px rgba(255, 40, 40, 0.04);
+}
+
+/* Card Heading */
+.skill-card-subcon1 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.skill-card-subcon1 h2 {
+    color: #b8b8c5;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Technology Items Container */
+.skill-card-subcon2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-bottom: 0;
+}
+
+/* Technology Pills */
+.technobox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 15px;
+    border-radius: 14px;
+
+    background: rgba(8, 13, 25, 0.8);
+    border: 1px solid rgba(160, 160, 180, 0.45);
+
+    transition: all 0.3s ease;
+}
+
+.technobox:hover {
+    transform: translateY(-4px);
+    border-color: rgba(2, 208, 2, 0.537);
+    background: rgba(2, 208, 2, 0.537);
+
+    box-shadow: 0 5px 15px rgba(2, 208, 2, 0.537);
+}
+
+/* Technology Images */
 .technobox img {
-  width: 25px;
-  height: 25px;
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
 }
-.technobox span{
-  font-size: 15px;
+
+/* Technology Text */
+.technobox span {
+    font-size: 15px;
+    color: #eeeeF5;
+    font-weight: 500;
+    white-space: nowrap;
 }
-/* Project sec*/
-#project-sec{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+/* Tablet */
+@media screen and (max-width: 1000px) {
+    .skills-con {
+        width: 90%;
+        gap: 22px;
+    }
+
+    .skill-card {
+        padding: 22px 15px;
+    }
+
+    .skill-card-subcon1 h2 {
+        font-size: 22px;
+    }
+
+    .technobox {
+        padding: 8px 11px;
+    }
 }
-.project-head{
-  display: flex;
-  padding: 20px 0;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  justify-content: center;
-  align-items: center;
-  font-size: 45px;
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+    .skills-con {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 90%;
+        gap: 20px;
+    }
+
+    .skill-card {
+        min-height: 160px;
+        padding: 25px 15px;
+    }
+
+    .skill-card-subcon1 h2 {
+        font-size: 21px;
+    }
+
+    .technobox span {
+        font-size: 13px;
+    }
+
+    .technobox img {
+        width: 23px;
+        height: 23px;
+    }
+}/* Project sec*/
+
+/* =============== HORIZONTAL PROJECT SLIDER =============== */
+
+#project-sec {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    box-sizing: border-box;
 }
-.project-con-sec{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  max-width: 100%;
-  margin: auto;
+
+.project-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+    font-size: 45px;
+    padding: 20px 0;
 }
-.slider{  
-  display: flex;
-  overflow-x: hidden;
-  width: 100%;
-  /* border: 2px solid red; */
-  align-items: center;
+
+.project-con-sec {
+    width: 100%;
+    overflow: hidden;
 }
-.project-txt{
-  margin-bottom: 15px;
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 400%;
+    align-items: stretch;
+    gap: 0;
 }
-.prj-contn{
-  display: flex;
-  padding: 10px;
-  width: 100%;
-  /* border: 2px solid red; */
-  margin-left: 7%;
+
+.prj-contn {
+    flex: 0 0 25%;
+    width: 25%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0 !important;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
 }
-.prj-contn:nth-child(2){
-  margin-right: 7%;
+
+.project-info {
+    flex: 1;
+    min-width: 0;
 }
-.description{
-  width: 35vw;
-  padding: 20px 10px;
-  line-height: 30px;
-  background-color: var(--bg-primary);
-  font-size: 25px;
-  /* filter: opacity(0.2); */
-  border-radius: 20px;
-  /* box-shadow: 3px 3px 20px white ; */
+
+.description {
+    width: 100%;
+    max-width: 650px;
+    box-sizing: border-box;
+    padding: 25px;
+    background: var(--bg-primary);
+    border-radius: 20px;
+    line-height: 1.7;
 }
-.description p{
-  color: var(--text-primary);
-  text-align: left;
-  font-size: 20px;
+
+.description h3 {
+    font-size: 27px;
+    margin-bottom: 15px;
 }
-.project-buttons{
-  margin-top: 15px;
+
+.description p {
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.8;
 }
-video{
-  width: 650px;
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.project-tags span {
+    font-size: 12px;
+    padding: 6px 12px;
+    border: 1px solid #6648d3;
+    color: #a992ff;
+    border-radius: 20px;
+}
+
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.project-buttons .btn {
+    margin: 0;
+}
+
+.project-video {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-video video,img {
+    width: 100%;
+    max-width: 650px;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* =============== MOBILE =============== */
+
+@media screen and (max-width: 800px) {
+    .prj-contn {
+        flex-direction: column;
+    }
+
+    .project-info,
+    .project-video {
+        width: 100%;
+    }
+
+    .description {
+        max-width: 100%;
+        padding: 18px;
+    }
+
+    .description h3 {
+        font-size: 22px;
+    }
+
+    .description p {
+        font-size: 14px;
+    }
+
+    .project-video video {
+        max-height: 250px;
+    }
 }
 /*Devider*/
 .devider hr{ 
@@ -654,13 +891,14 @@ video{
 /*  Page*/
 #cpy-cnt-sec{
   width: 100%;
-  height: 100%;
+  height: 99%;
   /* background-color: #555; */
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
+  /* border: 2px solid green; */
 
 }
 .textConLP{
@@ -702,3 +940,5 @@ video{
   background-color: #0a0917;
   overflow: hidden;
 }
+
+

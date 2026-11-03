@@ -46,7 +46,7 @@ window.addEventListener("mousemove", function (e) {
 
 Shery.mouseFollower();
 Shery.makeMagnet(".magnet");
-
+//Home in animation
 
 // Navigation toggle
 let toggle = document.getElementsByClassName("nav-pro-img")[0];
@@ -84,7 +84,7 @@ function sideNavTgl() {
   }
   so_lks.toggle = "active";
 }
-async function sideNavTglClse() {
+function sideNavTglClse() {
   sideNavWidth(70); 
   closeBtn.style = "display:none";
   to_cl_li.classList.remove("nav-w-toggle");
@@ -104,11 +104,11 @@ closeBtn.addEventListener("click", () => {
   sideNavTglClse();
 });
 
+
 let mobileNavToggle = document.querySelector(".toggle-mob-nav");
 let mob_navi = document.getElementsByClassName("tab-mob-view")[0];
 let close_mob_nav = document.getElementsByClassName("nav-close-btn")[0];
 mobileNavToggle.addEventListener("click", () => {
-  console.log("sdbg");
   gsap.to(".tab-mob-view", {
     transform: "translateY(0)",
   });
@@ -119,10 +119,20 @@ close_mob_nav.addEventListener("click", () => {
   });
 });
 
+let Links = document.querySelectorAll(".mob-lnk");
+
+Links.forEach(link => {
+  link.addEventListener("click",()=>{
+  gsap.to(".tab-mob-view", {  
+    transform: "translateY(-100%)",
+  });
+})
+});
+
 
 var typed = new Typed(".typer", {
-  strings: ["Web Developer", " Frontend Developer","Programmer"],
-  typeSpeed: 100,
+  strings: ["JAVA Full Stack Developer","MERN Stack Developer"],
+  typeSpeed: 90,
   loop: true,
   loopCount: Infinity,
 });
@@ -161,7 +171,7 @@ function LightToDark() {
 document.querySelector(".CvDwnldBtn").addEventListener("click", function (e) {
   e.preventDefault();
   window.location.href =
-    "./assets/JatinResume[1].pdf";
+    "./assets/Resume_JATIN_RANE.pdf";
 });
 // document.addEventListener("dblclick", () => {
 //   if (!light) {
@@ -172,3 +182,14 @@ document.querySelector(".CvDwnldBtn").addEventListener("click", function (e) {
 //     light = false;
 //   }
 // });
+
+//  Add CSS class for reduced motion
+        const style = document.createElement('style');
+        style.textContent = `
+            .reduced-motion * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        `;
+        document.head.appendChild(style);

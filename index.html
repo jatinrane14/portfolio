@@ -14,9 +14,9 @@
 </head>
 
 <body>  
-    <div class="overlay-mssg">
+    <!-- <div class="overlay-mssg">
         <h1>This Website is not more responsive yet! PLease open in your Desktop System.</h1>
-    </div>
+    </div> -->
     <div class="mouse-outline">
     </div>
     <div class="mouse-un-out">
@@ -117,10 +117,10 @@
                 <button>X</button>
             </div>
             <ul>
-                <li>Home</li>
-                <li>Project</li>
-                <li>About </li>
-                <li>Education</li>
+                <li class="mob-lnk"><a  href="#home">Home</a></li>
+                <li class="mob-lnk"><a href="#intro-section">About</a> </li>
+                <li class="mob-lnk"><a href="#project-sec">Project</a></li>
+                <li class="mob-lnk"><a href="#skill-sec">Skills</a></li>
             </ul>
         </div>
         <!-- mobile navigation top to bottom slider - End -->
@@ -130,7 +130,7 @@
             <canvas id="particles-canvas"></canvas>
             <div id="home" class="right-con">
                 <div class="hme-centre-con">
-                    <div class="boyimage ">
+                    <div class="boyimage">
                         <img src="./assets/images/home-emoji.png" alt="">
                     </div>
                     <div class="textcon ">
@@ -178,7 +178,7 @@
                 <div class="intro-sub-con">
                     <div>
                         <div class="textslider">
-                            <h2>I'm a <span class="typer">Frontend Developer</span></h2>
+                            <h2>I'm a <span class="typer">JAVA Full Stack Developer</span></h2>
                         </div>
                         <p class="intro-para">I am currenty pursuing B.tech Degree in Computer Science Engineering from Shri Vaishnav Vidhyapeeth Vishwavidhalaya. A passionate frontend developer with a solid foundation in programming languages. I’m always eager to learn and explore new technologies to create innovative and engaging web experiences.
                         </p>
@@ -187,7 +187,7 @@
                         <button class="CvDwnldBtn btn">
                             Download CV
                         </button>
-                        <button onclick="redirectToMail()" class="contact-me btn">Contact Us</button>
+                        <button onclick="redirectToMail()" class="contact-me btn">Contact Me</button>
                     </div>
                 </div>
             </div>
@@ -215,10 +215,28 @@
                     <h1 class="grn-clr">c</h1>
                     <h1 class="grn-clr">k</h1>
                 </div>
+
                 <div class="skills-con">
                     <div class="skill-card">
                         <div class="skill-card-subcon1">
-                            Frontend
+                            <h2>Programming Language</h2>
+                        </div>
+                        <div class="skill-card-subcon2">
+                            <div class="technobox">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LtK9iLA-qCKTnfOgbRS_FTDo9Er3sQuVVg&s"
+                                    alt="Js" srcset="">
+                                <span>Javascript(ES6+)</span>
+                            </div>
+                            <div class="technobox">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/182px-Java_programming_language_logo.svg.png"
+                                    alt="" srcset="">
+                                <span>Java(J2SE, J2EE)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card-subcon1">
+                            <h2>Frontend</h2>
                         </div>
                         <div class="skill-card-subcon2">
                             <div class="technobox">
@@ -229,15 +247,7 @@
                                 <img src="./assets/images/pngegg.png" alt="" srcset="">
                                 <span>CSS</span>
                             </div>
-                            <div class="technobox">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LtK9iLA-qCKTnfOgbRS_FTDo9Er3sQuVVg&s"
-                                    alt="">
-                                <span>Javascript</span> 
-                            </div>
-                            <div class="technobox">
-                                <img src="./assets/images/bootstrap-logo-shadow.png" alt="" srcset="">
-                                <span>Bootstrap</span>
-                            </div>
+                            
                             <div class="technobox">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
                                     viewBox="0,0,256,256">
@@ -263,36 +273,32 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="skill-card">
                         <div class="skill-card-subcon1">
-                            Programming Language
+                            <h2>Backend</h2>
                         </div>
                         <div class="skill-card-subcon2">
                             <div class="technobox">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1853px-C_Programming_Language.svg.png"
-                                    alt="" srcset="">
-                                <span>C</span>
-                            </div>
-                            <div class="technobox">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/180px-ISO_C%2B%2B_Logo.svg.png"
-                                    alt="" srcset="">
-                                <span>C++</span>
-                            </div>
-                            <div class="technobox">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LtK9iLA-qCKTnfOgbRS_FTDo9Er3sQuVVg&s"
                                     alt="Js" srcset="">
-                                <span>Javascript</span>
+                                <span>Express(NodeJS)</span>
                             </div>
                             <div class="technobox">
                                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/182px-Java_programming_language_logo.svg.png"
                                     alt="" srcset="">
-                                <span>Java</span>
+                                <span>Spring Boot </span>
+                            </div>
+                            <div class="technobox">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/182px-Java_programming_language_logo.svg.png"
+                                    alt="" srcset="">
+                                <span>REST APIs</span>
                             </div>
                         </div>
                     </div>
                     <div class="skill-card">
                         <div class="skill-card-subcon1">
-                            Other Tools
+                            <h2>Other Tools</h2>
                         </div>
                         <div class="skill-card-subcon2">
                             <div class="technobox">
@@ -303,76 +309,237 @@
                             <div class="technobox">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519"
                                     alt="" srcset="">
-                                <span>VsCode</span>
+                                <span>VSCode</span>
                             </div>
-                            <div class="technobox">
-                                <img src="data:image/png;base64,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"
-                                    alt="" srcset="">
-                                <span>Figma</span>
-                            </div>
-
+                            
                         </div>
                     </div>
                 </div>
                 <div class="devider">
                     <hr>
                 </div>
-                <div id="project-sec">
-                    <div class="project-head">
-                        <h1>P</h1>
-                        <h1>R</h1>
-                        <h1>O</h1>
-                        <h1>J</h1>
-                        <h1>E</h1>
-                        <h1>C</h1>
-                        <h1>T</h1>
-                        <h1>S</h1>
-                    </div>
-                    <div class="project-con-sec">
-                        <div class="slider">
-                            <div class="prj-contn">
-                                <div>
-                                    <div class="">
-                                        <div class="description">
-                                            <div class="project-txt">
-                                                <h3>Tik Tak Toi</h3>
-                                            </div>
-                                            <p>Tik Tak Toi is a modern twist on the classic Tic-Tac-Toe game, designed to provide an engaging and interactive experience for players of all ages. Built with a focus on intuitive design and smooth gameplay, Tik Tak Toi brings the traditional 3x3 grid game to life with vibrant visuals and intelligent features.
-                                                </p>
-                                            <div class="project-buttons">
-                                                <button onclick="window.open('https://github.com/jatinrane14/Tik-TacToi-Game/')" class="btn">View Code</button>
-                                                <button onclick="window.open('https://jatinrane14.github.io/Tik-TacToi-Game/')" class="btn">Live Preview</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="project-video">
-                                    <video muted autoplay src="./assets/Videos/TikTakToi.mp4"></video>
-                                </div>
-                            </div>
-                            <div class="prj-contn">
-                                <div>
-                                    <div class="">
-                                        <div class="description">
-                                            <div class="project-txt">
-                                                <h3>Weather App</h3>
-                                            </div>
-                                            <p>WeatherWise provides real-time weather updates with an easy-to-use interface. Stay informed about current conditions. It is developed using basic web technology(HTML,CSS,JS).</p>
-                                                <div class="project-buttons">
-                                                    <button onclick="window.open('https://github.com/jatinrane14/Weather-App/')" class="btn">View Code</button>
-                                                    <button onclick="window.open('https://jatinrane14.github.io/Weather-App/')" class="btn">Live Preview</button>
-                                                </div>  
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="project-video">
-                                    <video muted autoplay src="./assets/Videos/weather.mp4"></video>
-                                </div>
-                            </div>
+                
+<div id="project-sec">
+    <div class="project-head">
+        <h1>P</h1>
+        <h1>R</h1>
+        <h1>O</h1>
+        <h1>J</h1>
+        <h1>E</h1>
+        <h1>C</h1>
+        <h1>T</h1>
+        <h1>S</h1>
+    </div>
+
+    <div class="project-con-sec">
+        <div class="slider">
+
+            <!-- PROJECT 1: SVVV CAMPUS SCOUT -->
+            <div class="prj-contn">
+                <div class="project-info">
+                    <div class="description">
+                        <div class="project-txt">
+                            <h3>SVVV Campus Scout</h3>
+                        </div>
+
+                        <p>
+                            SVVV Campus Scout is a centralized academic
+                            platform designed for students and faculty of
+                            Shri Vaishnav Vidyapeeth Vishwavidyalaya.
+                            It provides easy access to academic resources
+                            including notes, previous year question papers,
+                            syllabus, faculty information and contact
+                            directories. It also includes secure
+                            authentication, faculty verification,
+                            bookmarking, resource uploads and AI-powered
+                            note summarization.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>React JS</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>MongoDB</span>
+                            <span>Cloudinary</span>
+                            <span>Gemini AI</span>
+                        </div>
+
+                        <div class="project-buttons">
+                            <button
+                                onclick="window.open('https://github.com/svvvcampusscout/SVVV-Campus-Scout', '_blank')"
+                                class="btn">
+                                View Code
+                            </button>
+
+                            <button
+                                onclick="window.open('https://campusscout.svvv.edu.in', '_blank')"
+                                class="btn">
+                                Live Preview
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="devider">
+
+                <div class="project-video">
+                    <!-- <video muted autoplay loop playsinline
+                        src="">
+                    </video> -->
+                    <img src="./assets/images/image.png" alt="" srcset="">
+                </div>
+            </div>
+
+
+            <!-- PROJECT 2: CITIZEN CHARTER SYSTEM -->
+            <div class="prj-contn">
+                <div class="project-info">
+                    <div class="description">
+                        <div class="project-txt">
+                            <h3>Citizen Charter System</h3>
+                        </div>
+
+                        <p>
+                            Citizen Charter System is a digital governance
+                            platform designed to improve transparency and
+                            accessibility of public services. It provides
+                            citizens with information about government
+                            services, required documents, application
+                            procedures and service timelines. The platform
+                            aims to simplify access to public information
+                            and improve communication between citizens
+                            and government departments.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Web Development</span>
+                            <span>Frontend</span>
+                            <span>Backend</span>
+                            <span>Database</span>
+                        </div>
+
+                        <div class="project-buttons">
+                            <button
+                                onclick="window.open('YOUR_CITIZEN_CHARTER_GITHUB_URL', '_blank')"
+                                class="btn">
+                                View Code
+                            </button>
+
+                            <button
+                                onclick="window.open('YOUR_CITIZEN_CHARTER_LIVE_URL', '_blank')"
+                                class="btn">
+                                Live Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-video">
+                    <!-- <video muted autoplay loop playsinline
+                        src="">
+                    </video> -->
+                    <img src="./assets/images/image.png" alt="" srcset="">
+                </div>
+            </div>
+
+
+            <!-- PROJECT 3: TIC TAC TOE -->
+            <div class="prj-contn">
+                <div class="project-info">
+                    <div class="description">
+                        <div class="project-txt">
+                            <h3>Tic Tac Toe</h3>
+                        </div>
+
+                        <p>
+                            Tic Tac Toe is a modern twist on the classic
+                            Tic-Tac-Toe game, designed to provide an
+                            engaging and interactive experience for
+                            players of all ages. Built with intuitive
+                            design and smooth gameplay, it brings the
+                            traditional 3x3 grid game to life with
+                            interactive features.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <div class="project-buttons">
+                            <button
+                                onclick="window.open('https://github.com/jatinrane14/Tik-TacToi-Game/', '_blank')"
+                                class="btn">
+                                View Code
+                            </button>
+
+                            <button
+                                onclick="window.open('https://jatinrane14.github.io/Tik-TacToi-Game/', '_blank')"
+                                class="btn">
+                                Live Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-video">
+                    <video muted autoplay loop playsinline
+                        src="./assets/Videos/TikTakToi.mp4">
+                    </video>
+                </div>
+            </div>
+
+
+            <!-- PROJECT 4: WEATHER APP -->
+            <div class="prj-contn">
+                <div class="project-info">
+                    <div class="description">
+                        <div class="project-txt">
+                            <h3>Weather App</h3>
+                        </div>
+
+                        <p>
+                            WeatherWise provides real-time weather
+                            updates through a clean and easy-to-use
+                            interface. Users can check current weather
+                            conditions and stay informed about the
+                            weather using HTML, CSS and JavaScript.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Weather API</span>
+                        </div>
+
+                        <div class="project-buttons">
+                            <button
+                                onclick="window.open('https://github.com/jatinrane14/Weather-App/', '_blank')"
+                                class="btn">
+                                View Code
+                            </button>
+
+                            <button
+                                onclick="window.open('https://jatinrane14.github.io/Weather-App/', '_blank')"
+                                class="btn">
+                                Live Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-video">
+                    <video muted autoplay loop playsinline
+                        src="./assets/Videos/weather.mp4">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+                <div class=" pr-divider devider">
                     <hr>
                 </div>
                 <section id="cpy-cnt-sec">
